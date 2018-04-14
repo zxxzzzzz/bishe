@@ -1,4 +1,4 @@
-from sqlserver import Db
+from pysrc.sqlserver import Db
 class Vehicle: #数据库里车辆对象的数据整合
     def __init__(self, id):#id为车辆id
         self.id = id

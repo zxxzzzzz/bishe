@@ -10,10 +10,10 @@ class ServerDemo(BaseHTTPRequestHandler):
         parsedPath = urlparse(self.path)
         ###########################################################资源
         path = parsedPath.path #url路径 path = /qqqqq
-        if(path.find('.')): ##起始页面
-            postfix = path.split('.')[-1]
-            if(postfix == 'html'):
-                with open(path[1:],'rb') as f:
+        if(path.find('.')): ##起始页面 path = /1.html
+            postfix = path.split('.')[-1] ## html
+            if(postfix == 'html'):##把js html移到src文件夹里了
+                with open('src/' + path[1:],'rb') as f:
                     self.send_response(200)
                     self.send_header('Content-type','text/html')
                     self.end_headers()
@@ -51,7 +51,7 @@ class ServerDemo(BaseHTTPRequestHandler):
 
 
         ######################################################
-        query = parsedPath.query
+        query = parsedPath.query 
         queryMap = {} #查询字典
         for elem in query.split('&'): ##elem = aa=111
             t = elem.split('=')

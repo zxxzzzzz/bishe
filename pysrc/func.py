@@ -1,5 +1,5 @@
 import json
-from vehicle import Vehicle
+from pysrc.vehicle import Vehicle
 class Func:
     _instance = None
     def __new__(cls, *args, **kwargs):
