@@ -1,7 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import path
 from urllib.parse import urlparse
-from func import Func
+from pysrc.func import Func
 class ServerDemo(BaseHTTPRequestHandler):
     # GET
     def do_GET(self):
