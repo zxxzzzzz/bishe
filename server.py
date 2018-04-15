@@ -10,7 +10,7 @@ class ServerDemo(BaseHTTPRequestHandler):
         parsedPath = urlparse(self.path)
         ###########################################################资源
         path = parsedPath.path #url路径 path = /qqqqq
-        if(path.find('.')): ##起始页面 path = /1.html
+        if(path.find('.') != -1): ##起始页面 path = /1.html
             postfix = path.split('.')[-1] ## html
             if(postfix == 'html'):##把js html移到src文件夹里了
                 with open('src/' + path[1:],'rb') as f:
@@ -46,6 +46,7 @@ class ServerDemo(BaseHTTPRequestHandler):
                     self.end_headers()
                     self.wfile.write(f.read())
                 return
+            return
 
             
 

@@ -1,0 +1,39 @@
+$(function(){
+    // var map = new AMap.Map('amap',{
+    //     resizeEnable: true,
+    //     zoom: 10,
+    //     center: [116.480983, 40.0958]
+    // });
+    // $.ajax({
+    //     url:"/vehicle?id=8509726&time=2017-03-02&limit=200&offset=2",
+    //     async:true,
+    //     type:'get',
+    //     dataType:'json',
+    //     success:function(result){
+    //         var mepath = []
+    //         var i = 0
+    //         result.data.forEach(element => {
+    //             mepath.push([parseFloat(element.lng),parseFloat(element.lat)])
+    //            i++
+    //         });
+    //         new AMap.Polyline({
+    //             path: mepath,
+    //             strokeColor: "#00A",
+    //             strokeWeight:3,
+    //             map: map,
+    //         });
+    //         console.log(mepath)
+    //         map.setCenter([119.540885,31.749622])
+    //     }
+    // });
+        // new AMap.Marker({
+        //     position: [119.540885,31.749622],
+        //     map: map,
+                    
+        // });
+    $('#submit').click(function(){
+        console.log($('#val').val())
+        window.location.href='index.html'
+    })
+})
+//<div id="amap" tabindex="0" style="height: 400px"></div>
